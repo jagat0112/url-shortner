@@ -4,18 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node index",
+    "start": "node index",
     "dev": "nodemon index"
   },
   "engines": {
     "node": "14.17.1"
-    },
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.7.4",
     "config": "^3.3.6",
     "express": "^4.17.1",
+    "helmet": "^4.6.0",
     "mongoose": "^5.12.14",
     "short-id": "0.1.0-1",
     "valid-url": "^1.0.9"
