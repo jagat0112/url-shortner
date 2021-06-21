@@ -1,6 +1,5 @@
 const express = require("express");
 const config = require("config");
-const validUrl = require("valid-url");
 const ids = require("short-id");
 const Url = require("../Model/Url");
 
@@ -8,9 +7,7 @@ const router = express.Router();
 
 router.post("/", async (req, res) => {
   const { longUrl } = req.body;
-  if (!validUrl.isUri(longUrl)) {
-    return res.status(401).send("Not a valid URI");
-  }
+
   const url = await Url.findOne({ longUrl });
   if (url) {
     return res.status(200).send(url.shortUrl);
