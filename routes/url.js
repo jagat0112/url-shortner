@@ -29,4 +29,13 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get('/', async (req,res)=>{
+  const urls = await Url.find()
+  if(!urls){
+    res.status(403).send("URL NOT FOUND")
+
+  }
+  res.status(200).send(urls)
+})
+
 module.exports = router;
