@@ -1,4 +1,3 @@
 {
-  "db": "mongodb+srv://jagat0112:Pradhan@0112@cluster0.tfivk.mongodb.net/UrlShortnerretryWrites=true&w=majority",
-  "baseUrl": "http://localhost:5000"
+  "app_name":"link-shortner"
 }
