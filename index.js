@@ -17,5 +17,6 @@ app.use(express.json());
 app.use("/api/url", require("./routes/url"));
 app.use("/", require("./routes/index"));
 
+const PORT  = 5000 || process.env.PORT
 
-app.listen(5000 || process.env.PORT, () => console.log(`Server Started...`));
+app.listen(PORT, () => console.log(`Server Started at ${PORT}...`));
